@@ -1,0 +1,48 @@
+{
+  "name": "react-redux-values",
+  "version": "1.0.0",
+  "license": "BSD-3-Clause",
+  "description": "get and set values from a redux store in a declarative way",
+  "keywords": ["redux", "react", "react-redux", "set", "get", "declarative"],
+  "repository": "github:ramitos/react-redux-values",
+  "main": "dist/react-redux-values.umd.js",
+  "jsnext:main": "dist/react-redux-values.es.js",
+  "module": "dist/react-redux-values.es.js",
+  "entry": "src/index.js",
+  "files": ["dist"],
+  "scripts": {
+    "lint": "eslint . --fix --ext .js --ext .md",
+    "fmt": "prettier --write --single-quote *.md src/*.js *.json",
+    "build": "NODE_ENV=development bup",
+    "prepublish": "NODE_ENV=production bup"
+  },
+  "dependencies": {
+    "lodash.isundefined": "^3.0.1",
+    "prop-types": "^15.6.0",
+    "redux-actions": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.2",
+    "babel-preset-joyent-portal": "^3.3.3",
+    "bup": "^2.0.6",
+    "eslint": "^4.10.0",
+    "eslint-config-joyent-portal": "3.2.0",
+    "eslint-config-prettier": "^2.7.0",
+    "eslint-config-react-app": "^2.0.1",
+    "eslint-config-xo-space": "^0.17.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-markdown": "^1.0.0-beta.6",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-react": "^7.4.0",
+    "prettier": "^1.8.2",
+    "react": "^16.1.0",
+    "react-redux": "^5.0.6"
+  },
+  "peerDependencies": {
+    "react": "^16.1.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
+  }
+}
