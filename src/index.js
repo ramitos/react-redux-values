@@ -13,7 +13,7 @@ export const reducer = handleAction(set, (state, { payload }) => {
     ...state,
     [name]: value
   };
-});
+}, {});
 
 const Value = ({ children, handleChange, ...rest }) =>
   children({
