@@ -22,8 +22,8 @@ const Value = ({ children, handleChange, ...rest }) =>
   });
 
 Value.propTypes = {
-  children: PropTypes.func.required,
-  name: PropTypes.string.required,
+  children: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
   initialValue: PropTypes.any
 };
 
