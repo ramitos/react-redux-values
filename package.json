@@ -1,6 +1,6 @@
 {
   "name": "react-redux-values",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "license": "BSD-3-Clause",
   "description": "get and set values from a redux store in a declarative way",
   "keywords": ["redux", "react", "react-redux", "set", "get", "declarative"],

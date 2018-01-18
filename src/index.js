@@ -1,5 +1,5 @@
 import React from 'react';
-import { createAction, handleAction } from 'redux-actions';
+import { createAction, handleActions } from 'redux-actions';
 import { connect } from 'react-redux';
 import isUndefined from 'lodash.isundefined';
 import PropTypes from 'prop-types';
