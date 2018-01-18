@@ -5,14 +5,29 @@ import isUndefined from 'lodash.isundefined';
 import PropTypes from 'prop-types';
 
 export const set = createAction('@@react-redux-values/set');
+export const destroyAll = createAction('@@react-redux-values/destroy-all');
+export const destroy = createAction('@@react-redux-values/destroy');
 
-export const reducer = handleAction(set, (state, { payload }) => {
-  const { name, value } = payload;
+export const reducer = handleActions({
+  set: (state, { payload }) => {
+    const { name, value } = payload;
 
-  return {
-    ...state,
-    [name]: value
-  };
+    return {
+      ...state,
+      [name]: value
+    };
+  },
+  destroy: (state, { payload }) => {
+    const { name } = payload;
+    delete state[name];
+
+    return {
+      ...state
+    };
+  },
+  destroyAll: () => {
+    return {};
+  },
 }, {});
 
 const Value = ({ children, handleChange, ...rest }) =>
