@@ -9,7 +9,7 @@ export const destroyAll = createAction('@@react-redux-values/destroy-all');
 export const destroy = createAction('@@react-redux-values/destroy');
 
 export const reducer = handleActions({
-  set: (state, { payload }) => {
+  [set]: (state, { payload }) => {
     const { name, value } = payload;
 
     return {
@@ -17,7 +17,7 @@ export const reducer = handleActions({
       [name]: value
     };
   },
-  destroy: (state, { payload }) => {
+  [destroy]: (state, { payload }) => {
     const { name } = payload;
     delete state[name];
 
@@ -25,7 +25,7 @@ export const reducer = handleActions({
       ...state
     };
   },
-  destroyAll: () => {
+  [destroyAll]: () => {
     return {};
   },
 }, {});
